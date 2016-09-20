@@ -37,9 +37,11 @@ queue.push(a);
 queue.push(b);
 ```
 
-### `T item = queue.pop();`
+### `T item = queue.pop(bool peek = false);`
 
-Gets a generic item (of `T` type) from the front of the queue.
+Gets a generic item (of `T` type) from the front of the queue. 
+
+Use optional argument `peek` to get an item without removing it from the queue.
 
 **Example**
 
@@ -49,6 +51,7 @@ byte a = 255;
 byte b = 0;
 queue.push(a);
 queue.push(b);
+assert(a == queue.pop(true)); // true (peek only)
 assert(a == queue.pop()); // true
 assert(b == queue.pop()); // true
 ```
