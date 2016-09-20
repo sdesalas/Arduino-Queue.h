@@ -4,9 +4,9 @@ Generic C++ circular queue for Arduino embedded projects.
 
 ## Constructor
 
-### `Queue<T> queue = Queue(int maxlength);`
+### `Queue<T> queue = Queue(int maxlength = 100);`
 
-Creates a queue of a generic type `T` with a specific maximum queue size. 
+Creates a queue of a generic type `T` with a maximum queue size. If `maxlength` is not defined it will default to 100.
 
 NOTE: If the queue grows to `maxlength` items (and you dont take them out) any additional items added *will drop out of the queue*.
 Please bear this in mind when defining maxlength so it is a reasonable balance between RAM usage and functional usefulness.
@@ -14,11 +14,11 @@ Please bear this in mind when defining maxlength so it is a reasonable balance b
 **Examples**
 
 ```cpp
-Queue<byte> queue = Queue(int maxlength); // Queue of byte
-Queue<int> queue = Queue(int maxlength); // Queue of int
-Queue<char> queue = Queue(int maxlength); // Queue of char
-Queue<Point> queue = Queue(int maxlength); // Queue of 'Point', where 'Point' is an Enum 
-Queue<String> queue = Queue(int maxlength); // Queue of 'String', where 'String' is a Class
+Queue<byte> queue = Queue(1000); // Queue of max 1000 bytes
+Queue<int> queue = Queue(); // Queue of max 100 int
+Queue<char> queue = Queue(260); // Queue of max 260 chars
+Queue<Point> queue = Queue(10); // Queue of max 10 'Point', where 'Point' is an Enum 
+Queue<String> queue = Queue(); // Queue of max 100 'String', where 'String' is a Class
 ```
 
 ## Methods
@@ -30,7 +30,7 @@ Adds a generic item (of `T` type) at the back of the queue.
 **Example**
 
 ```cpp
-Queue<byte> queue = Queue(int maxlength);
+Queue<byte> queue = Queue();
 byte a = 255;
 byte b = 0;
 queue.push(a);
@@ -44,7 +44,7 @@ Gets a generic item (of `T` type) from the front of the queue.
 **Example**
 
 ```cpp
-Queue<byte> queue = Queue(int maxlength); 
+Queue<byte> queue = Queue(); 
 byte a = 255;
 byte b = 0;
 queue.push(a);
@@ -60,7 +60,7 @@ Gets the current position in the front of the queue. Used for testing queue logi
 **Example**
 
 ```cpp
-Queue<byte> queue = Queue(int maxlength); 
+Queue<byte> queue = Queue(); 
 byte a = 255;
 byte b = 0;
 queue.push(a);
@@ -76,7 +76,7 @@ Gets the current position at the back of the queue. Used for testing queue logic
 **Example**
 
 ```cpp
-Queue<byte> queue = Queue(int maxlength); 
+Queue<byte> queue = Queue(); 
 byte a = 255;
 byte b = 0;
 queue.push(a);
@@ -96,7 +96,7 @@ Make sure you set the `baud rate` to 115200 and `No new line`.
 ```cpp
 #include "Queue.h":
 
-Queue<char> queue(5);
+Queue<char> queue(5); // Max 5 chars!
 
 void setup() {
   Serial.begin(115200);
