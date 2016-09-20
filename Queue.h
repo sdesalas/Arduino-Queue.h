@@ -2,7 +2,7 @@
  * Queue.h
  * 
  * Defines a templated (generic) class for a queue of things.
- * Used for Arduino projects, just #include "Queue.h"; and add this file via the IDE.
+ * Used for Arduino projects, just #include "Queue.h" and add this file via the IDE.
  * 
  * Examples:
  * 
