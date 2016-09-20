@@ -91,6 +91,8 @@ assert(1 == queue.front()); // true
 
 The following example is testable using 'Serial Monitor' over USB connection from Arduino IDE.
 
+Make sure you set the `baud rate` to 115200.
+
 ```cpp
 #include "Queue.h":
 
