@@ -15,8 +15,8 @@ Please bear this in mind when defining maxlength so it is a reasonable balance b
 
 ```
 Queue<byte> queue = Queue(int maxlength); // Queue of byte
-Queue<int> queue = Queue(int maxlength);` // Queue of int
-Queue<char> queue = Queue(int maxlength);` // Queue of char
+Queue<int> queue = Queue(int maxlength); // Queue of int
+Queue<char> queue = Queue(int maxlength); // Queue of char
 Queue<Point> queue = Queue(int maxlength); // Queue of 'Point', where 'Point' is an Enum 
 Queue<String> queue = Queue(int maxlength); // Queue of 'String', where 'String' is a Class
 ```
