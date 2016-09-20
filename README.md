@@ -13,7 +13,7 @@ Please bear this in mind when defining maxlength so it is a reasonable balance b
 
 **Examples**
 
-```
+```cpp
 Queue<byte> queue = Queue(int maxlength); // Queue of byte
 Queue<int> queue = Queue(int maxlength); // Queue of int
 Queue<char> queue = Queue(int maxlength); // Queue of char
@@ -29,7 +29,7 @@ Adds a generic item (of `T` type) at the back of the queue.
 
 **Example**
 
-```
+```cpp
 Queue<byte> queue = Queue(int maxlength);
 byte a = 255;
 byte b = 0;
@@ -43,7 +43,7 @@ Gets a generic item (of `T` type) from the front of the queue.
 
 **Example**
 
-```
+```cpp
 Queue<byte> queue = Queue(int maxlength); 
 byte a = 255;
 byte b = 0;
@@ -59,7 +59,7 @@ Gets the current position in the front of the queue. Used for testing queue logi
 
 **Example**
 
-```
+```cpp
 Queue<byte> queue = Queue(int maxlength); 
 byte a = 255;
 byte b = 0;
@@ -75,7 +75,7 @@ Gets the current position at the back of the queue. Used for testing queue logic
 
 **Example**
 
-```
+```cpp
 Queue<byte> queue = Queue(int maxlength); 
 byte a = 255;
 byte b = 0;
