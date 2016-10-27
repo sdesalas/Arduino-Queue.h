@@ -4,9 +4,9 @@ Generic C++ circular queue for Arduino embedded projects.
 
 ## Constructor
 
-### `Queue<T> queue = Queue(int maxlength = 100);`
+### `Queue<T> queue = Queue(int maxlength = 256);`
 
-Creates a queue of a generic type `T` with a maximum queue size. If `maxlength` is not defined it will default to 100.
+Creates a queue of a generic type `T` with a maximum queue size. If `maxlength` is not defined it will default to 256.
 
 NOTE: If the queue grows to `maxlength` items (and you dont take them out) any additional items added *will drop out of the queue*.
 Please bear this in mind when defining maxlength so it is a reasonable balance between RAM usage and functional usefulness.
