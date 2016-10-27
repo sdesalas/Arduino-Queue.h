@@ -4,7 +4,7 @@ Generic C++ circular queue for Arduino embedded projects.
 
 ## Constructor
 
-### `Queue<T> queue = Queue(int maxlength = 256);`
+### `Queue<T> queue = Queue<T>(int maxlength = 256);`
 
 Creates a queue of a generic type `T` with a maximum queue size. If `maxlength` is not defined it will default to 256.
 
@@ -14,11 +14,11 @@ Please bear this in mind when defining maxlength so it is a reasonable balance b
 **Examples**
 
 ```cpp
-Queue<byte> queue = Queue(1000); // Queue of max 1000 bytes
-Queue<int> queue = Queue(); // Queue of max 256 int
-Queue<char> queue = Queue(260); // Queue of max 260 chars
-Queue<Point> queue = Queue(10); // Queue of max 10 'Point', where 'Point' is a struct 
-Queue<String> queue = Queue(); // Queue of max 256 'String', where 'String' is a class
+Queue<byte> queue = Queue<byte>(1000); // Queue of max 1000 bytes
+Queue<int> queue = Queue<int>(); // Queue of max 256 int
+Queue<char> queue = Queue<char>(260); // Queue of max 260 chars
+Queue<Point> queue = Queue<Point>(10); // Queue of max 10 'Point', where 'Point' is a struct 
+Queue<String> queue = Queue<String>(); // Queue of max 256 'String', where 'String' is a class
 ```
 
 ## Methods
@@ -30,7 +30,7 @@ Adds a generic item (of `T` type) at the back of the queue.
 **Example**
 
 ```cpp
-Queue<byte> queue = Queue();
+Queue<byte> queue = Queue<byte>();
 byte a = 255;
 byte b = 0;
 queue.push(a);
@@ -48,7 +48,7 @@ Same as .pop() but keeps the item in the queue.
 **Example**
 
 ```cpp
-Queue<byte> queue = Queue(); 
+Queue<byte> queue = Queue<byte>(); 
 byte a = 255;
 byte b = 0;
 queue.push(a);
@@ -65,7 +65,7 @@ Gets the current position in the front of the queue. Used for testing queue logi
 **Example**
 
 ```cpp
-Queue<byte> queue = Queue(); 
+Queue<byte> queue = Queue<byte>(); 
 byte a = 255;
 byte b = 0;
 queue.push(a);
@@ -81,7 +81,7 @@ Gets the current position at the back of the queue. Used for testing queue logic
 **Example**
 
 ```cpp
-Queue<byte> queue = Queue(); 
+Queue<byte> queue = Queue<byte>(); 
 byte a = 255;
 byte b = 0;
 queue.push(a);
@@ -99,7 +99,7 @@ Removes all items from the queue.
 **Example**
 
 ```cpp
-Queue<byte> queue = Queue(); 
+Queue<byte> queue = Queue<byte>(); 
 queue.push(1);
 queue.push(2);
 queue.clear();
