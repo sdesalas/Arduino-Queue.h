@@ -42,7 +42,7 @@ class Queue {
     T *_data;
     int _maxitems;
   public:
-    Queue(int maxitems = 100) {
+    Queue(int maxitems = 1000) { 
       _front = 0;
       _back = 0;
       _count = 0;
@@ -56,7 +56,9 @@ class Queue {
     inline int front();
     inline int back();
     void push(const T &item);
-    T pop(bool keep);
+    T peek();
+    T pop();
+    void clear();
 };
 
 template<class T>
@@ -90,19 +92,30 @@ void Queue<T>::push(const T &item)
 }
 
 template<class T>
-T Queue<T>::pop(bool keep = false) {
+T Queue<T>::pop() {
   if(_count <= 0) return T(); // Returns empty
   else {
     T result = _data[_front];
-    if (!keep) {
-      _front++;
-      --_count;
-    }
+    _front++;
+    --_count;
     // Check wrap around
     if (_front > _maxitems) 
       _front -= (_maxitems + 1);
     return result; 
   }
+}
+
+template<class T>
+T Queue<T>::peek() {
+  if(_count <= 0) return T(); // Returns empty
+  else return _data[_front];
+}
+
+template<class T>
+void Queue<T>::clear() 
+{
+  _front = _back;
+  _count = 0;
 }
 
 #endif
