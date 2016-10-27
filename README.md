@@ -37,11 +37,13 @@ queue.push(a);
 queue.push(b);
 ```
 
-### `T item = queue.pop(bool peek = false);`
+### `T item = queue.pop();`
 
 Gets a generic item (of `T` type) from the front of the queue. 
 
-Use optional argument `peek` to get an item without removing it from the queue.
+### `T item = queue.peek();`
+
+Same as .pop() but keeps the item in the queue.
 
 **Example**
 
@@ -51,8 +53,8 @@ byte a = 255;
 byte b = 0;
 queue.push(a);
 queue.push(b);
-assert(a == queue.pop(true)); // true (peek only)
 assert(a == queue.pop()); // true
+assert(b == queue.peek()); // true
 assert(b == queue.pop()); // true
 ```
 
@@ -90,6 +92,21 @@ assert(1 == queue.back()); // true
 assert(1 == queue.front()); // true
 ```
 
+### `queue.clear();`
+
+Removes all items from the queue.
+
+**Example**
+
+```cpp
+Queue<byte> queue = Queue(); 
+queue.push(1);
+queue.push(2);
+queue.clear();
+queue.push(3);
+assert(3 == queue.pop()); // true
+```
+
 ## All Together now
 
 The following example is testable using 'Serial Monitor' over USB connection from Arduino IDE.
@@ -123,7 +140,7 @@ void loop() {
     Serial.print(" in front and ");
     Serial.print(queue.back());
     Serial.print(" in back. Next is.. '");
-    Serial.print(queue.pop(true));
+    Serial.print(queue.peek());
     Serial.println("'.");
   } else {
     Serial.println("Nothing to process..."); 
