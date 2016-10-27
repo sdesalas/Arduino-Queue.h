@@ -1,6 +1,8 @@
 /*
  * Queue.h
  * 
+ * By Steven de Salas
+ * 
  * Defines a templated (generic) class for a queue of things.
  * Used for Arduino projects, just #include "Queue.h" and add this file via the IDE.
  * 
@@ -42,7 +44,7 @@ class Queue {
     T *_data;
     int _maxitems;
   public:
-    Queue(int maxitems = 1000) { 
+    Queue(int maxitems = 256) { 
       _front = 0;
       _back = 0;
       _count = 0;
