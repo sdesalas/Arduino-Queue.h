@@ -15,10 +15,10 @@ Please bear this in mind when defining maxlength so it is a reasonable balance b
 
 ```cpp
 Queue<byte> queue = Queue(1000); // Queue of max 1000 bytes
-Queue<int> queue = Queue(); // Queue of max 100 int
+Queue<int> queue = Queue(); // Queue of max 256 int
 Queue<char> queue = Queue(260); // Queue of max 260 chars
 Queue<Point> queue = Queue(10); // Queue of max 10 'Point', where 'Point' is a struct 
-Queue<String> queue = Queue(); // Queue of max 100 'String', where 'String' is a class
+Queue<String> queue = Queue(); // Queue of max 256 'String', where 'String' is a class
 ```
 
 ## Methods
