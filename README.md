@@ -2,6 +2,10 @@
 
 Generic C++ circular queue for Arduino embedded projects.
 
+## Why?
+
+Because I need one, and I need it to be generic. I dabble with arduino [robotics](https://github.com/sdesalas/robotics) a bit and this is the cornerstone for leveraging the full power out of the microcontroller [loop](https://www.arduino.cc/en/reference/loop).
+
 ## Constructor
 
 ### `Queue<T> queue = Queue<T>(int maxlength = 256);`
