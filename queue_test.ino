@@ -1,7 +1,7 @@
 
-#include "Queue.h":
+#include "Queue.h"
 
-Queue<char> queue(5);
+Queue<char> queue = Queue<char>(5);
 
 void setup() {
   Serial.begin(115200);
