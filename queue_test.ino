@@ -25,7 +25,7 @@ void loop() {
     Serial.print(" in front and ");
     Serial.print(queue.back());
     Serial.print(" in back. Next is.. '");
-    Serial.print(queue.pop(true));
+    Serial.print(queue.peek());
     Serial.println("'.");
   } else {
     Serial.println("Nothing to process..."); 
