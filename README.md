@@ -1,6 +1,6 @@
 # Queue.h
 
-Generic C++ circular queue for Arduino embedded projects.
+[Generic](https://en.wikipedia.org/wiki/Generic_programming) C++ circular queue for Arduino embedded projects.
 
 ## Why?
 
