@@ -118,9 +118,9 @@ The following example is testable using 'Serial Monitor' over USB connection fro
 Make sure you set the `baud rate` to 115200 and `No new line`.
 
 ```cpp
-#include "Queue.h":
+#include "Queue.h"
 
-Queue<char> queue(5); // Max 5 chars!
+Queue<char> queue = Queue<char>(5); // Max 5 chars!
 
 void setup() {
   Serial.begin(115200);
