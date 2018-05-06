@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/sdesalas/Arduino-Queue.h.svg)](https://travis-ci.org/sdesalas/Arduino-Queue.h)
 # Queue.h
 
 [Generic](https://en.wikipedia.org/wiki/Generic_programming) C++ circular queue for Arduino embedded projects.
