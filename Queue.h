@@ -54,6 +54,7 @@ class Queue {
     ~Queue() {
       delete[] _data;  
     }
+    inline bool isEmpty();
     inline int count();
     inline int front();
     inline int back();
@@ -62,6 +63,12 @@ class Queue {
     T pop();
     void clear();
 };
+
+template<class T>
+inline int Queue<T>::isEmpty() 
+{
+  return (_count == 0);
+}
 
 template<class T>
 inline int Queue<T>::count() 
