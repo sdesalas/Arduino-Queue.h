@@ -116,6 +116,8 @@ assert(3 == queue.pop()); // true
 
 The following example is testable using 'Serial Monitor' over USB connection from Arduino IDE.
 
+Copy the file [`Queue.h`](./Queue.h) in the same folder as your `*.ino` code file.
+
 Make sure you set the `baud rate` to 115200 and `No new line`.
 
 ```cpp
