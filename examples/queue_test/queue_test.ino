@@ -28,7 +28,7 @@ void loop() {
     Serial.print(queue.peek());
     Serial.println("'.");
   } else {
-    Serial.println("Nothing to process..."); 
+    Serial.println("Nothing to process...");
   }
   delay(2000);
 }
