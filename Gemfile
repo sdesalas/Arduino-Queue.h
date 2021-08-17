@@ -1,2 +1,2 @@
 source 'https://rubygems.org'
-gem 'arduino_ci', '~> 0.1.7'
+gem 'arduino_ci', '~> 0.3.0'
